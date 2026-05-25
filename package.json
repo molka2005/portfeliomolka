@@ -1,0 +1,17 @@
+{
+  "private": true,
+  "workspaces": [
+    "portfelionmolka"
+  ],
+  "scripts": {
+    "dev": "npm --workspace portfelionmolka run dev",
+    "build": "npm --workspace portfelionmolka run build",
+    "preview": "npm --workspace portfelionmolka run preview",
+    "lint": "npm --workspace portfelionmolka run lint"
+  },
+  "dependencies": {
+    "aos": "^2.3.4",
+    "framer-motion": "^12.40.0",
+    "lucide-react": "^1.16.0"
+  }
+}
