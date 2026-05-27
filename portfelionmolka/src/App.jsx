@@ -3,6 +3,8 @@ import AOS from "aos";
 import "aos/dist/aos.css";
 import Navbar from "./Components/Navbar";
 import Hero from "./Components/Hero";
+import About from "./Components/About";
+import Projects from "./Components/Projects";
 import Contact from "./Components/Contact";
 import Footer from "./Components/Footer";
 import { useState, useEffect } from "react";
@@ -43,6 +45,8 @@ const App = () => {
     >
       <Navbar darkMode={darkMode} toggleDarkMode={toggleDarkMode} />
       <Hero darkMode={darkMode} />
+      <About darkMode={darkMode} />
+      <Projects darkMode={darkMode} />
       <Contact darkMode={darkMode} />
       <Footer darkMode={darkMode} />
     </div>
