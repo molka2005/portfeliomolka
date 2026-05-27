@@ -12,15 +12,6 @@ const About = ({ darkMode }) => {
     cardBorder: darkMode ? 'border-gray-700' : 'border-gray-200',
   };
 
-  const skills = [
-    { name: 'React', level: '85%' },
-    { name: 'JavaScript / Node.js', level: '80%' },
-    { name: 'Tailwind CSS', level: '90%' },
-    { name: 'DevOps (Docker, CI/CD)', level: '65%' },
-    { name: 'Python (Data & AI)', level: '70%' },
-    { name: 'Git & GitHub', level: '85%' },
-  ];
-
   return (
     <div className="w-full">
       <section
@@ -118,46 +109,6 @@ const About = ({ darkMode }) => {
                   <p className={`text-[11px] ${theme.textSecondary}`}>Continuous Learning</p>
                 </div>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
-      {/* Skills Section */}
-      <section id="skills" className="py-20 relative overflow-hidden">
-        {/* Decorative blur */}
-        <div className="absolute bottom-0 left-1/4 w-96 h-96 bg-amber-500/10 rounded-full blur-3xl -z-10 pointer-events-none"></div>
-
-        <div className="container mx-auto px-4 sm:px-8 lg:px-14">
-          <div className="text-center mb-16" data-aos="fade-up">
-            <h2 className={`text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4 tracking-tight ${theme.textPrimary}`}>
-              My <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500">Skills</span>
-            </h2>
-            <div className="h-1 w-20 bg-orange-500 mx-auto rounded-full"></div>
-            <p className={`mt-6 text-lg max-w-2xl mx-auto ${theme.textSecondary}`}>
-              A snapshot of the technologies and tools I work with daily to bring ideas to life.
-            </p>
-          </div>
-
-          <div className="max-w-4xl mx-auto">
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-              {skills.map((skill, index) => (
-                <div key={index} data-aos="fade-up" data-aos-delay={index * 100}>
-                  <div className="flex justify-between mb-2">
-                    <span className={`font-semibold ${theme.textPrimary}`}>{skill.name}</span>
-                    <span className="text-orange-500 font-bold">{skill.level}</span>
-                  </div>
-                  <div className={`w-full h-3 rounded-full overflow-hidden ${darkMode ? 'bg-gray-700' : 'bg-gray-200'}`}>
-                    <motion.div 
-                      className="h-full bg-gradient-to-r from-orange-500 to-amber-500"
-                      initial={{ width: 0 }}
-                      whileInView={{ width: skill.level }}
-                      viewport={{ once: true }}
-                      transition={{ duration: 1.5, ease: "easeOut" }}
-                    />
-                  </div>
-                </div>
-              ))}
             </div>
           </div>
         </div>
