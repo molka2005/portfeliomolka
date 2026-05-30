@@ -26,20 +26,18 @@ jobs:
         with:
           node-version: 20
           cache: 'npm'
-          cache-dependency-path: portfelionmolka/package-lock.json
+          cache-dependency-path: package-lock.json
 
       - name: Install dependencies
         run: npm ci --legacy-peer-deps
-        working-directory: portfelionmolka
 
       - name: Build
         run: npm run build
-        working-directory: portfelionmolka
 
       - name: Upload artifact
         uses: actions/upload-pages-artifact@v3
         with:
-          path: portfelionmolka/dist
+          path: dist
 
   deploy:
     needs: build
