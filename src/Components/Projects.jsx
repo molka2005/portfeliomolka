@@ -78,21 +78,21 @@ const Projects = ({ darkMode }) => {
             >
               {/* Background Layer (Image, Base Color, and Gradient Overlay) */}
               <div className="absolute inset-0 -z-10 overflow-hidden">
-                {/* Card Base Background with blur */}
-                <div className={`absolute inset-0 ${theme.cardBg} backdrop-blur-md`}></div>
+                {/* Solid Card Base to block out blue website background */}
+                <div className={`absolute inset-0 ${darkMode ? 'bg-gray-950' : 'bg-slate-100'}`}></div>
                 
-                {/* Project Screenshot */}
+                {/* Project Screenshot with high opacity */}
                 <img 
                   src={project.image} 
                   alt={project.title} 
-                  className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 opacity-30 group-hover:opacity-50 filter blur-[0.5px] group-hover:blur-0" 
+                  className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 opacity-65 group-hover:opacity-85 filter group-hover:brightness-105" 
                 />
                 
-                {/* Gradient overlay for high text contrast */}
-                <div className={`absolute inset-0 transition-colors duration-300 ${
+                {/* Gradient overlay for excellent text contrast at the bottom, transparent at the top */}
+                <div className={`absolute inset-0 transition-opacity duration-300 ${
                   darkMode 
-                    ? 'bg-gradient-to-t from-gray-950 via-gray-900/80 to-gray-900/40 group-hover:from-gray-950 group-hover:via-gray-950/85 group-hover:to-gray-900/50' 
-                    : 'bg-gradient-to-t from-white via-white/80 to-white/40 group-hover:from-white group-hover:via-white/85 group-hover:to-white/50'
+                    ? 'bg-gradient-to-t from-gray-950 via-gray-950/70 to-transparent' 
+                    : 'bg-gradient-to-t from-white via-white/80 to-transparent'
                 }`}></div>
               </div>
 
