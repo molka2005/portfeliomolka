@@ -149,7 +149,7 @@ const About = ({ darkMode }) => {
               contentArrowStyle={{ borderRight: darkMode ? '7px solid rgba(249,115,22,0.3)' : '7px solid rgba(249,115,22,0.4)' }}
               date={
                 <span className={`font-semibold text-sm ${darkMode ? 'text-orange-300' : 'text-orange-600'}`}>
-                  Apr 2026 – Jun 2026 &nbsp;·&nbsp; 2 months
+                  Jun 2026 – Jul 2026 &nbsp;·&nbsp; 2 months
                 </span>
               }
               iconStyle={{
@@ -209,7 +209,7 @@ const About = ({ darkMode }) => {
               contentArrowStyle={{ borderLeft: darkMode ? '7px solid rgba(249,115,22,0.3)' : '7px solid rgba(249,115,22,0.4)' }}
               date={
                 <span className={`font-semibold text-sm ${darkMode ? 'text-orange-300' : 'text-orange-600'}`}>
-                  Freelance &nbsp;·&nbsp; Ongoing
+                  Jun 2025 – Sep 2025 &nbsp;·&nbsp; 3 months
                 </span>
               }
               iconStyle={{

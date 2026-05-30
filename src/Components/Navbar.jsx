@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
 import { motion } from 'framer-motion'
+import logo from './logo.png'
 
 const Navbar = ({ darkMode, toggleDarkMode }) => {
   const [activeSection, setActiveSection] = useState('home')
@@ -33,9 +34,12 @@ const Navbar = ({ darkMode, toggleDarkMode }) => {
         <div className="flex items-center justify-between w-full">
           <div className="flex items-center">
             <a href="/" className="flex items-center ml-3">
-              <span className={`text-xl font-bold ${darkMode ? 'text-white' : 'text-gray-900'}`}>
-                Portfolio
-              </span>
+              <div className="flex items-center gap-2 ml-3">
+                <img src={logo} alt="logo" className="w-8 h-8" />
+                  <span className={`text-xl font-bold ${darkMode ? 'text-white' : 'text-gray-900'}`}>
+                    Molka Zghal
+                  </span>
+              </div>
             </a>
           </div>
 
