@@ -74,19 +74,25 @@ const Projects = ({ darkMode }) => {
               key={index} 
               data-aos="fade-up" 
               data-aos-delay={index * 100}
-              className={`relative overflow-hidden rounded-2xl p-6 sm:p-8 border ${theme.cardBorder} ${theme.cardBg} backdrop-blur-md shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group z-10 flex flex-col justify-between min-h-[380px]`}
+              className={`relative overflow-hidden rounded-2xl p-6 sm:p-8 border ${theme.cardBorder} shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group z-10 flex flex-col justify-between min-h-[380px]`}
             >
-              {/* Background Image with elegant overlay */}
+              {/* Background Layer (Image, Base Color, and Gradient Overlay) */}
               <div className="absolute inset-0 -z-10 overflow-hidden">
+                {/* Card Base Background with blur */}
+                <div className={`absolute inset-0 ${theme.cardBg} backdrop-blur-md`}></div>
+                
+                {/* Project Screenshot */}
                 <img 
                   src={project.image} 
                   alt={project.title} 
-                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-15 group-hover:opacity-25 filter blur-[0.5px] group-hover:blur-0" 
+                  className="w-full h-full object-cover transition-all duration-500 group-hover:scale-110 opacity-30 group-hover:opacity-50 filter blur-[0.5px] group-hover:blur-0" 
                 />
+                
+                {/* Gradient overlay for high text contrast */}
                 <div className={`absolute inset-0 transition-colors duration-300 ${
                   darkMode 
-                    ? 'bg-gradient-to-t from-gray-950 via-gray-900/90 to-gray-900/70 group-hover:from-gray-950 group-hover:via-gray-950/95 group-hover:to-gray-900/85' 
-                    : 'bg-gradient-to-t from-white via-white/95 to-white/70 group-hover:from-white group-hover:via-white/95 group-hover:to-white/85'
+                    ? 'bg-gradient-to-t from-gray-950 via-gray-900/80 to-gray-900/40 group-hover:from-gray-950 group-hover:via-gray-950/85 group-hover:to-gray-900/50' 
+                    : 'bg-gradient-to-t from-white via-white/80 to-white/40 group-hover:from-white group-hover:via-white/85 group-hover:to-white/50'
                 }`}></div>
               </div>
 
