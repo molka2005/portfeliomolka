@@ -1,4 +1,8 @@
 import React from 'react';
+import portfelio from './portfelio.png';
+import velvet from './velvet.png';
+import climdata from './climdata.png';
+import main1 from './main1.png';
 
 const Projects = ({ darkMode }) => {
   const theme = {
@@ -13,33 +17,37 @@ const Projects = ({ darkMode }) => {
       title: "Portfolio Website",
       description: "A modern, responsive personal portfolio built with React and Tailwind CSS. Features dynamic theming, smooth scrolling, and animated components.",
       tags: ["React", "Tailwind CSS", "Framer Motion", "Vite"],
-      github: "https://github.com/molka2005",
-      demo: "#",
-      gradient: "from-orange-500 to-amber-500"
+      github: "https://github.com/molka2005/portfeliomolka",
+      demo: "https://molka2005.github.io/portfeliomolka/",
+      gradient: "from-orange-500 to-amber-500",
+      image: portfelio
     },
     {
-      title: "CI/CD DevOps Pipeline",
-      description: "Automated deployment pipeline leveraging Docker, GitHub Actions, and Jenkins to streamline the build, test, and release process for web applications.",
-      tags: ["Docker", "GitHub Actions", "Jenkins", "DevOps"],
-      github: "https://github.com/molka2005",
-      demo: "#",
-      gradient: "from-blue-500 to-cyan-500"
+      title: "DevOps E-commerce Platform",
+      description: "A responsive e-commerce interface built with HTML5, CSS3, and vanilla JavaScript. Features smooth multi-page navigation, Docker-based containerization for consistent deployments, and automated service monitoring with self-recovery using Bash scripts.",
+      tags: ["HTML5", "CSS3", "JavaScript", "Docker", "Bash"],
+      github: "https://github.com/molka2005/velvet",
+      demo: "https://molka2005.github.io/velvet/",
+      gradient: "from-blue-500 to-cyan-500",
+      image: velvet
     },
     {
-      title: "Data Analysis Dashboard",
-      description: "An interactive dashboard for visualizing complex datasets using Python, Pandas, and Streamlit, showcasing insights through various chart types.",
-      tags: ["Python", "Pandas", "Streamlit", "Data Science"],
-      github: "https://github.com/molka2005",
-      demo: "#",
-      gradient: "from-green-500 to-emerald-500"
+      title: "DataClima – Climate Data Analysis Web Platform",
+      description: "A collaborative climate data analysis platform built with React (Vite) and Node.js/Express. Features CSV and Excel data import, interactive visualizations, dynamic maps, and PDF export, along with secure JWT-based authentication using MongoDB. Led Agile development as Scrum Master, ensuring effective sprint planning, task prioritization, and team collaboration.",
+      tags: ["React", "Node.js", "Express", "MongoDB", "Recharts", "Leaflet", "JWT", "Scrum"],
+      github: "https://github.com/molka2005/ClimaData",
+      demo: "https://clima-data.vercel.app/",
+      gradient: "from-green-500 to-emerald-500",
+      image: climdata
     },
     {
-      title: "E-Commerce API",
-      description: "A robust backend RESTful API built with Node.js and Express, connected to a PostgreSQL database, featuring user authentication and product management.",
-      tags: ["Node.js", "Express", "PostgreSQL", "Backend"],
-      github: "https://github.com/molka2005",
+      title: "HealthMate – Connected Mobile Health Application",
+      description: " Developed an Android app for chronic disease management featuring nutritional tracking, online consultations, and a community chat space using Java, XML, and Android Studio. Integrated an intelligent health chatbot for personalized guidance. Collaborated via Git/GitHub for branch management, code reviews, and documentation.",
+      tags: ["Android", "Java", "XML", "Git/GitHub"],
+      github: "https://github.com/molka2005/HealthMate",
       demo: "#",
-      gradient: "from-purple-500 to-pink-500"
+      gradient: "from-purple-500 to-pink-500",
+      image: main1
     }
   ];
 
@@ -66,41 +74,57 @@ const Projects = ({ darkMode }) => {
               key={index} 
               data-aos="fade-up" 
               data-aos-delay={index * 100}
-              className={`rounded-2xl p-6 sm:p-8 border ${theme.cardBorder} ${theme.cardBg} backdrop-blur-md shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group`}
+              className={`relative overflow-hidden rounded-2xl p-6 sm:p-8 border ${theme.cardBorder} ${theme.cardBg} backdrop-blur-md shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group z-10 flex flex-col justify-between min-h-[380px]`}
             >
-              <div className="flex justify-between items-start mb-6">
-                <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${project.gradient} flex items-center justify-center text-white shadow-lg`}>
-                  <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
-                  </svg>
-                </div>
-                <div className="flex gap-3">
-                  <a href={project.github} target="_blank" rel="noopener noreferrer" className={`p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors ${theme.textPrimary}`}>
-                    <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
-                      <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
-                    </svg>
-                  </a>
-                  <a href={project.demo} target="_blank" rel="noopener noreferrer" className={`p-2 rounded-full hover:bg-gray-200 dark:hover:bg-gray-700 transition-colors ${theme.textPrimary}`}>
-                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
-                    </svg>
-                  </a>
-                </div>
+              {/* Background Image with elegant overlay */}
+              <div className="absolute inset-0 -z-10 overflow-hidden">
+                <img 
+                  src={project.image} 
+                  alt={project.title} 
+                  className="w-full h-full object-cover transition-transform duration-500 group-hover:scale-110 opacity-15 group-hover:opacity-25 filter blur-[0.5px] group-hover:blur-0" 
+                />
+                <div className={`absolute inset-0 transition-colors duration-300 ${
+                  darkMode 
+                    ? 'bg-gradient-to-t from-gray-950 via-gray-900/90 to-gray-900/70 group-hover:from-gray-950 group-hover:via-gray-950/95 group-hover:to-gray-900/85' 
+                    : 'bg-gradient-to-t from-white via-white/95 to-white/70 group-hover:from-white group-hover:via-white/95 group-hover:to-white/85'
+                }`}></div>
               </div>
 
-              <h3 className={`text-2xl font-bold mb-3 ${theme.textPrimary} group-hover:text-orange-500 transition-colors`}>
-                {project.title}
-              </h3>
-              
-              <p className={`mb-6 line-clamp-3 ${theme.textSecondary}`}>
-                {project.description}
-              </p>
+              <div>
+                <div className="flex justify-between items-start mb-6">
+                  <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${project.gradient} flex items-center justify-center text-white shadow-lg`}>
+                    <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 20l4-16m4 4l4 4-4 4M6 16l-4-4 4-4" />
+                    </svg>
+                  </div>
+                  <div className="flex gap-3 z-20">
+                    <a href={project.github} target="_blank" rel="noopener noreferrer" className={`p-2 rounded-full hover:bg-gray-200/50 dark:hover:bg-gray-700/50 transition-colors ${theme.textPrimary}`}>
+                      <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24">
+                        <path fillRule="evenodd" d="M12 2C6.477 2 2 6.484 2 12.017c0 4.425 2.865 8.18 6.839 9.504.5.092.682-.217.682-.483 0-.237-.008-.868-.013-1.703-2.782.605-3.369-1.343-3.369-1.343-.454-1.158-1.11-1.466-1.11-1.466-.908-.62.069-.608.069-.608 1.003.07 1.531 1.032 1.531 1.032.892 1.53 2.341 1.088 2.91.832.092-.647.35-1.088.636-1.338-2.22-.253-4.555-1.113-4.555-4.951 0-1.093.39-1.988 1.029-2.688-.103-.253-.446-1.272.098-2.65 0 0 .84-.27 2.75 1.026A9.564 9.564 0 0112 6.844c.85.004 1.705.115 2.504.337 1.909-1.296 2.747-1.027 2.747-1.027.546 1.379.202 2.398.1 2.651.64.7 1.028 1.595 1.028 2.688 0 3.848-2.339 4.695-4.566 4.943.359.309.678.92.678 1.855 0 1.338-.012 2.419-.012 2.747 0 .268.18.58.688.482A10.019 10.019 0 0022 12.017C22 6.484 17.522 2 12 2z" />
+                      </svg>
+                    </a>
+                    <a href={project.demo} target="_blank" rel="noopener noreferrer" className={`p-2 rounded-full hover:bg-gray-200/50 dark:hover:bg-gray-700/50 transition-colors ${theme.textPrimary}`}>
+                      <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14" />
+                      </svg>
+                    </a>
+                  </div>
+                </div>
+
+                <h3 className={`text-2xl font-bold mb-3 ${theme.textPrimary} group-hover:text-orange-500 transition-colors`}>
+                  {project.title}
+                </h3>
+                
+                <p className={`mb-6 line-clamp-3 text-sm leading-relaxed ${theme.textSecondary}`}>
+                  {project.description}
+                </p>
+              </div>
 
               <div className="flex flex-wrap gap-2 mt-auto">
                 {project.tags.map((tag, i) => (
                   <span 
                     key={i} 
-                    className={`text-xs font-semibold px-3 py-1 rounded-full border ${theme.cardBorder} ${darkMode ? 'bg-gray-700/50 text-orange-300' : 'bg-gray-100 text-orange-600'}`}
+                    className={`text-xs font-semibold px-3 py-1 rounded-full border ${theme.cardBorder} ${darkMode ? 'bg-gray-800/40 text-orange-300' : 'bg-gray-50/50 text-orange-600'}`}
                   >
                     {tag}
                   </span>
