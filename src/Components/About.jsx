@@ -255,6 +255,101 @@ const About = ({ darkMode }) => {
           </VerticalTimeline>
         </div>
       </section>
+
+      {/* Technical Training Section */}
+      <section id="training" className="py-20 relative overflow-hidden">
+        {/* Decorative blur */}
+        <div className="absolute top-1/3 left-0 w-80 h-80 bg-orange-500/10 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+        <div className="absolute bottom-1/3 right-0 w-80 h-80 bg-amber-500/10 rounded-full blur-3xl -z-10 pointer-events-none"></div>
+
+        <div className="container mx-auto px-4 sm:px-8 lg:px-14">
+          {/* Section Header */}
+          <div className="text-center mb-16" data-aos="fade-up">
+            <h2 className={`text-3xl sm:text-4xl lg:text-5xl font-extrabold mb-4 tracking-tight ${theme.textPrimary}`}>
+              Technical <span className="text-transparent bg-clip-text bg-gradient-to-r from-orange-500 to-amber-500">Training</span>
+            </h2>
+            <div className="flex items-center justify-center gap-2">
+              <div className="h-1 w-12 bg-orange-500 rounded-full"></div>
+              <div className="h-1 w-3 bg-amber-500 rounded-full"></div>
+              <div className="h-1 w-1 bg-amber-400 rounded-full"></div>
+            </div>
+          </div>
+
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+            {/* Training 1 */}
+            <div 
+              data-aos="fade-right"
+              className={`p-6 sm:p-8 rounded-2xl border ${theme.cardBorder} ${theme.cardBg} backdrop-blur-md shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 relative group overflow-hidden flex flex-col justify-between`}
+            >
+              <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-orange-500 to-amber-500"></div>
+              
+              <div>
+                <div className="flex justify-between items-start mb-4">
+                  <span className="text-[10px] uppercase tracking-wider font-extrabold px-2.5 py-1 rounded-full bg-orange-500/10 text-orange-500 border border-orange-500/20">
+                    Cloud & DevOps
+                  </span>
+                  <span className={`text-xs font-semibold ${theme.textSecondary}`}>TechWorld with Nana</span>
+                </div>
+                
+                <h3 className={`text-2xl font-bold mb-4 ${theme.textPrimary}`}>
+                  DevOps Bootcamp
+                </h3>
+                
+                <p className={`text-sm leading-relaxed mb-6 ${theme.textSecondary}`}>
+                  Intensive hands-on training in CI/CD automation using Jenkins for pipeline creation and build management, cloud infrastructure provisioning across AWS, DigitalOcean, and Linode for scalable deployments, and advanced version control workflows with Git including branching strategies, pull requests, and collaborative code integration.
+                </p>
+              </div>
+              
+              <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-gray-200/10 dark:border-gray-700/30">
+                {['Jenkins', 'AWS', 'DigitalOcean', 'Linode', 'Git', 'CI/CD'].map((tag) => (
+                  <span 
+                    key={tag} 
+                    className="text-[11px] font-semibold px-2.5 py-1 rounded-full bg-orange-500/10 text-orange-500 border border-orange-500/20"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+
+            {/* Training 2 */}
+            <div 
+              data-aos="fade-left"
+              className={`p-6 sm:p-8 rounded-2xl border ${theme.cardBorder} ${theme.cardBg} backdrop-blur-md shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-1 relative group overflow-hidden flex flex-col justify-between`}
+            >
+              <div className="absolute top-0 left-0 w-1.5 h-full bg-gradient-to-b from-amber-500 to-yellow-500"></div>
+              
+              <div>
+                <div className="flex justify-between items-start mb-4">
+                  <span className="text-[10px] uppercase tracking-wider font-extrabold px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-500 border border-amber-500/20">
+                    Data & AI
+                  </span>
+                  <span className={`text-xs font-semibold ${theme.textSecondary}`}>DataCamp</span>
+                </div>
+                
+                <h3 className={`text-2xl font-bold mb-4 ${theme.textPrimary}`}>
+                  Python for Data Analysis Bootcamp
+                </h3>
+                
+                <p className={`text-sm leading-relaxed mb-6 ${theme.textSecondary}`}>
+                  Completed an intensive Datacamp bootcamp in Python for data analysis, mastering Pandas, NumPy, and Matplotlib for data manipulation, statistical computing, and visualization, along with MySQL for efficient database querying and data extraction.
+                </p>
+              </div>
+              
+              <div className="flex flex-wrap gap-2 mt-auto pt-4 border-t border-gray-200/10 dark:border-gray-700/30">
+                {['Python', 'Pandas', 'NumPy', 'Matplotlib', 'MySQL', 'Data Analysis'].map((tag) => (
+                  <span 
+                    key={tag} 
+                    className="text-[11px] font-semibold px-2.5 py-1 rounded-full bg-amber-500/10 text-amber-500 border border-amber-500/20"
+                  >
+                    {tag}
+                  </span>
+                ))}
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
   );
 };
