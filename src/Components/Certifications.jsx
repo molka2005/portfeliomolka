@@ -7,6 +7,7 @@ const Certifications = ({ darkMode }) => {
   const theme = {
     textPrimary: darkMode ? 'text-white' : 'text-gray-900',
     textSecondary: darkMode ? 'text-gray-300' : 'text-gray-600',
+    cardBorder: darkMode ? 'border-gray-700' : 'border-gray-200',
   };
 
   const certifications = [
