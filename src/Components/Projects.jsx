@@ -166,12 +166,12 @@ const Projects = ({ darkMode }) => {
 
         {/* Project Grid */}
         <div
-          className={`grid grid-cols-1 md:grid-cols-2 gap-5 max-w-4xl mx-auto transition-all duration-200 ${animating ? 'proj-cards-exit' : ''}`}
+          className={`grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto transition-all duration-200 ${animating ? 'proj-cards-exit' : ''}`}
         >
           {visible.map((project, index) => (
             <div
               key={project.title}
-              className={`proj-card-enter relative overflow-hidden rounded-2xl p-4 sm:p-5 border ${theme.cardBorder} shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group z-10 flex flex-col justify-between min-h-[240px]`}
+              className={`proj-card-enter relative overflow-hidden rounded-2xl p-5 sm:p-6 border ${theme.cardBorder} shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group z-10 flex flex-col justify-between min-h-[280px]`}
               style={{ animationDelay: `${index * 70}ms` }}
             >
               {/* Background Layer */}
