@@ -49,33 +49,44 @@ const Certifications = ({ darkMode }) => {
               key={index}
               data-aos="fade-up"
               data-aos-delay={index * 100}
-              className={`relative overflow-hidden rounded-2xl border-2 border-orange-500/70 shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group z-10 flex flex-col justify-end min-h-[380px]`}
+              className={`relative overflow-hidden rounded-2xl border ${theme.cardBorder} shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group flex flex-col bg-white dark:bg-gray-800`}
             >
-              {/* Image de fond pleine largeur */}
-              <img
-                src={cert.background}
-                alt={cert.title}
-                className="absolute inset-0 w-full h-full object-cover z-0"
-              />
-              {/* Voile orangé subtil */}
-              <div className="absolute inset-0 bg-gradient-to-br from-orange-500/20 to-transparent z-10" />
-              {/* Gradient de lisibilité en bas */}
-              <div
-                className={`absolute inset-0 bg-gradient-to-t z-10 ${
-                  darkMode
-                    ? 'from-gray-950/60 via-gray-950/20 to-transparent'
-                    : 'from-white/60 via-white/20 to-transparent'
-                }`}
-              />
+              {/* Conteneur de l'image (Capture d'écran) */}
+              <div className="relative w-full h-64 sm:h-72 overflow-hidden bg-gray-100 dark:bg-gray-900 flex items-center justify-center p-2">
+                <img
+                  src={cert.background}
+                  alt={cert.title}
+                  className="w-full h-full object-cover rounded-xl transition-transform duration-500 group-hover:scale-105 shadow-inner"
+                />
+                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/20 to-transparent pointer-events-none" />
+              </div>
 
-              {/* Barre rectangulaire du bas – dégradé du titre, sans logo */}
-              <div className="relative z-20 w-full bg-gradient-to-r from-orange-500 to-amber-500 px-6 py-4 text-white">
-                <h3 className="text-xl font-bold tracking-tight">
-                  {cert.title}
-                </h3>
-                <p className="text-sm font-medium text-orange-100 mt-1">
-                  {cert.issuer}
-                </p>
+              {/* Cadre rectangulaire du bas contenant le nom et le logo */}
+              <div className="relative w-full bg-gradient-to-r from-orange-500 to-amber-500 px-6 py-5 text-white flex items-center justify-between">
+                <div className="flex-1 pr-4">
+                  <h3 className="text-xl sm:text-2xl font-bold tracking-tight">
+                    {cert.title}
+                  </h3>
+                  <p className="text-sm font-medium text-orange-100 mt-1">
+                    {cert.issuer}
+                  </p>
+                </div>
+                
+                {/* Logo de certificat bien tracé */}
+                <div className="bg-white/20 p-3 rounded-full backdrop-blur-md border border-white/30 shadow-[0_0_15px_rgba(255,255,255,0.3)] shrink-0 group-hover:scale-110 transition-transform duration-300">
+                  <svg 
+                    className="w-8 h-8 text-white drop-shadow-md" 
+                    fill="none" 
+                    stroke="currentColor" 
+                    strokeWidth="2" 
+                    viewBox="0 0 24 24" 
+                    strokeLinecap="round" 
+                    strokeLinejoin="round"
+                  >
+                    <circle cx="12" cy="8" r="6"></circle>
+                    <path d="M15.477 12.89 17 22l-5-3-5 3 1.523-9.11"></path>
+                  </svg>
+                </div>
               </div>
             </div>
           ))}
