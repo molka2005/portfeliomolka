@@ -44,7 +44,7 @@ const Certifications = ({ darkMode }) => {
         </div>
 
         {/* Cartes */}
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-10">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6 max-w-5xl mx-auto">
           {certifications.map((cert, index) => (
             <div
               key={index}
@@ -53,7 +53,7 @@ const Certifications = ({ darkMode }) => {
               className={`relative overflow-hidden rounded-2xl border ${theme.cardBorder} shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group flex flex-col bg-white dark:bg-gray-800`}
             >
               {/* Conteneur de l'image (Capture d'écran) */}
-              <div className="relative w-full h-32 sm:h-40 overflow-hidden bg-gray-50 dark:bg-gray-900/50 flex items-center justify-center p-1.5">
+              <div className="relative w-full h-44 sm:h-52 overflow-hidden bg-gray-50 dark:bg-gray-900/50 flex items-center justify-center p-1.5">
                 <img
                   src={cert.background}
                   alt={cert.title}
