@@ -53,30 +53,29 @@ const Certifications = ({ darkMode }) => {
               className={`relative overflow-hidden rounded-2xl border ${theme.cardBorder} shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group flex flex-col bg-white dark:bg-gray-800`}
             >
               {/* Conteneur de l'image (Capture d'écran) */}
-              <div className="relative w-full h-64 sm:h-72 overflow-hidden bg-gray-100 dark:bg-gray-900 flex items-center justify-center p-2">
+              <div className="relative w-full h-40 sm:h-48 overflow-hidden bg-gray-50 dark:bg-gray-900/50 flex items-center justify-center p-2">
                 <img
                   src={cert.background}
                   alt={cert.title}
-                  className="w-full h-full object-cover rounded-xl transition-transform duration-500 group-hover:scale-105 shadow-inner"
+                  className="w-full h-full object-cover rounded-lg transition-transform duration-500 group-hover:scale-105 shadow-sm"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-gray-900/20 to-transparent pointer-events-none" />
               </div>
 
               {/* Cadre rectangulaire du bas contenant le nom et le logo */}
-              <div className="relative w-full bg-gradient-to-r from-orange-500 to-amber-500 px-6 py-5 text-white flex items-center justify-between">
+              <div className="relative w-full bg-white dark:bg-gray-800 px-5 py-4 flex items-center justify-between border-t border-gray-100 dark:border-gray-700/60">
                 <div className="flex-1 pr-4">
-                  <h3 className="text-xl sm:text-2xl font-bold tracking-tight">
+                  <h3 className={`text-lg sm:text-xl font-bold tracking-tight ${theme.textPrimary}`}>
                     {cert.title}
                   </h3>
-                  <p className="text-sm font-medium text-orange-100 mt-1">
+                  <p className={`text-xs sm:text-sm font-medium mt-1 ${theme.textSecondary}`}>
                     {cert.issuer}
                   </p>
                 </div>
                 
-                {/* Logo de certificat bien tracé */}
-                <div className="bg-white/20 p-3 rounded-full backdrop-blur-md border border-white/30 shadow-[0_0_15px_rgba(255,255,255,0.3)] shrink-0 group-hover:scale-110 transition-transform duration-300">
+                {/* Logo de certificat élégant */}
+                <div className="bg-orange-500/10 p-2.5 rounded-full border border-orange-500/20 shrink-0 group-hover:scale-110 transition-transform duration-300">
                   <svg 
-                    className="w-8 h-8 text-white drop-shadow-md" 
+                    className="w-6 h-6 text-orange-500" 
                     fill="none" 
                     stroke="currentColor" 
                     strokeWidth="2" 
