@@ -332,7 +332,7 @@ const About = ({ darkMode }) => {
                 </h3>
                 
                 <p className={`text-sm leading-relaxed mb-6 ${theme.textSecondary}`}>
-                  Completed an intensive Datacamp bootcamp in Python for data analysis, mastering Pandas, NumPy, and Matplotlib for data manipulation, statistical computing, and visualization, along with MySQL for efficient database querying and data extraction.
+                  Completed an intensive DataCamp bootcamp in Python for data analysis, mastering Pandas, NumPy, and Matplotlib for data manipulation, statistical computing, and visualization, along with MySQL for efficient database querying and data extraction.
                 </p>
               </div>
               

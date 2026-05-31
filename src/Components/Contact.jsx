@@ -15,11 +15,18 @@ const Contact = ({ darkMode }) => {
   const handleSubmit = (e) => {
     e.preventDefault()
     setIsSubmitting(true)
-    // Simulate form submission
+    // Simulate form processing
     setTimeout(() => {
       setIsSubmitting(false)
       setIsSubmitted(true)
-    }, 1200)
+      
+      // Construct mailto link
+      const subject = `Portfolio Contact: ${formData.firstName} ${formData.lastName}`;
+      const body = `Name: ${formData.firstName} ${formData.lastName}\nEmail: ${formData.email}\nPhone: ${formData.phone}\n\nMessage:\n${formData.message}`;
+      const mailtoLink = `mailto:molkazghal510@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+      
+      window.open(mailtoLink, '_self');
+    }, 800)
   }
 
   // WhatsApp Icon

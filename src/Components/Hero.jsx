@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import hero from './molka.png'
 import hi from './hi.png'
+import myCV from '../CV.Molka.Zghal.pdf'
 
 // Import hi icon from public or from local folder if you have one
 // Example: import hi from './hi.png'
@@ -46,8 +47,8 @@ const Hero = ({ darkMode }) => {
     </svg>
   )
 
-  // CV file path - update this to your actual CV file
-  const CV = '/cv.pdf'
+  // CV file path
+  const CV = myCV
 
   const socialIcons = [
     {

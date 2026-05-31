@@ -50,7 +50,7 @@ const Projects = ({ darkMode }) => {
     },
     {
       title: "HealthMate – Connected Mobile Health Application",
-      description: " Developed an Android app for chronic disease management featuring nutritional tracking, online consultations, and a community chat space using Java, XML, and Android Studio. Integrated an intelligent health chatbot for personalized guidance. Collaborated via Git/GitHub for branch management, code reviews, and documentation.",
+      description: "Developed an Android app for chronic disease management featuring nutritional tracking, online consultations, and a community chat space using Java, XML, and Android Studio. Integrated an intelligent health chatbot for personalized guidance. Collaborated via Git/GitHub for branch management, code reviews, and documentation.",
       tags: ["Android", "Java", "XML", "Git/GitHub"],
       github: "https://github.com/molka2005/HealthMate",
       demo: "#",

@@ -53,7 +53,7 @@ const Certifications = ({ darkMode }) => {
               className={`relative overflow-hidden rounded-2xl border ${theme.cardBorder} shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group flex flex-col bg-white dark:bg-gray-800`}
             >
               {/* Conteneur de l'image (Capture d'écran) */}
-              <div className="relative w-full h-56 sm:h-64 overflow-hidden bg-gray-50 dark:bg-gray-900/50">
+              <div className="relative w-full h-64 sm:h-72 overflow-hidden bg-gray-50 dark:bg-gray-900/50">
                 <img
                   src={cert.background}
                   alt={cert.title}
