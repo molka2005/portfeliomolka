@@ -53,7 +53,7 @@ const Certifications = ({ darkMode }) => {
               className={`relative overflow-hidden rounded-2xl border ${theme.cardBorder} shadow-xl hover:shadow-2xl transition-all duration-300 transform hover:-translate-y-2 group flex flex-col bg-white dark:bg-gray-800`}
             >
               {/* Conteneur de l'image (Capture d'écran) */}
-              <div className="relative w-full h-40 sm:h-48 overflow-hidden bg-gray-50 dark:bg-gray-900/50 flex items-center justify-center p-2">
+              <div className="relative w-full h-32 sm:h-40 overflow-hidden bg-gray-50 dark:bg-gray-900/50 flex items-center justify-center p-1.5">
                 <img
                   src={cert.background}
                   alt={cert.title}
@@ -62,9 +62,9 @@ const Certifications = ({ darkMode }) => {
               </div>
 
               {/* Cadre rectangulaire du bas contenant le nom et le logo */}
-              <div className="relative w-full bg-white dark:bg-gray-800 px-5 py-4 flex items-center justify-between border-t border-gray-100 dark:border-gray-700/60">
+              <div className="relative w-full bg-white dark:bg-gray-800 px-4 py-3 flex items-center justify-between border-t border-gray-100 dark:border-gray-700/60">
                 <div className="flex-1 pr-4">
-                  <h3 className={`text-lg sm:text-xl font-bold tracking-tight ${theme.textPrimary}`}>
+                  <h3 className={`text-base sm:text-lg font-bold tracking-tight ${theme.textPrimary}`}>
                     {cert.title}
                   </h3>
                   <p className={`text-xs sm:text-sm font-medium mt-1 ${theme.textSecondary}`}>
